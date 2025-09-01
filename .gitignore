@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+
+# HA IGNORE
+HA-DEV/
+HA-Domains/
+HA-TESTING/
+
+
 # Distribution / packaging
 .Python
 build/
