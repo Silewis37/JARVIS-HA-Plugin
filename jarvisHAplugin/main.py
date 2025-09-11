@@ -3,7 +3,6 @@
 
 #$ TO-DO List $#
 #[] TO-DO List Item
-#[*] Completed TO-DO List Item
 
 #* Libraries *#
 
@@ -14,6 +13,11 @@ import requests
 class HomeAssistantClient:
     # Initialize the plugin
     def __init__(self, base_url: str, token: str):
+        """
+        Initialize the Home Assistant client.
+        :param base_url: http://localhost:8123 or http://192.168.x.x:8123 or HomeAssistantWebAddress
+        :param token: Token gained from Home Assistant
+        """
         self.base_url = base_url.rstrip("/")
         self.headers = {
             "Authorization": f"Bearer {token}",
@@ -72,9 +76,7 @@ class HomeAssistantClient:
         resp = requests.post(url, headers=self.headers, json=data)
         return resp.json()
 
-#! Main Program !#
 
-#~ the main program goes here
 
 
 #- UNASSIGNED COLOR -#
